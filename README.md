@@ -1,17 +1,17 @@
-# pp4-valkyrie
+# potentpi4
 
-![Build Status](https://github.com/OnyxJeff/pp4-valkyrie/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/OnyxJeff/potentpi4/actions/workflows/build.yml/badge.svg)
 ![Maintenance](https://img.shields.io/maintenance/yes/2026.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub release](https://img.shields.io/github/v/release/OnyxJeff/pp4-valkyrie)
-![Issues](https://img.shields.io/github/issues/OnyxJeff/pp4-valkyrie)
+![GitHub release](https://img.shields.io/github/v/release/OnyxJeff/potentpi4)
+![Issues](https://img.shields.io/github/issues/OnyxJeff/potentpi4)
 
 **Valkyrie** is the internal playground server for my homelab, hosted on a Raspberry Pi 4.
 
 ## 📁 Repo Structure
 
 ```text
-pp4-valkyrie/
+potentpi4/
 ├── .github/workflows/      # CI for YAML validation
 ├── backup_logs/            # Oldest logs from update script
 ├── dockprom/               # Docker container(s) for Prometheus Node Exporter for RPi
@@ -53,7 +53,7 @@ pp4-valkyrie/
   - Download repo
   ```bash
   cd
-  git clone https://github.com/OnyxJeff/pp4-valkyrie.git
+  git clone https://github.com/OnyxJeff/potentpi4.git
   ```
 ---
 
@@ -67,7 +67,7 @@ Choose Interface Options Enable i2c
 
 - Run setup_display_service.sh script
 ```bash
-cd ~/pp4-valkyrie/U6143_ssd1306
+cd ~/potentpi4/U6143_ssd1306
 chmod +x setup_display_service.sh
 sudo ./setup_display_service.sh
 ```
@@ -93,13 +93,13 @@ sudo ./setup_display_service.sh
 
 - Make log folders
 ```bash
-mkdir ~/pp4-valkyrie/logs
-mkdir ~/pp4-valkyrie/backup_logs
+mkdir ~/potentpi4/logs
+mkdir ~/potentpi4/backup_logs
 ```
 
 - Update and Upgrade the System via script:
 ```bash
-cd ~/pp4-valkyrie/scripts
+cd ~/potentpi4/scripts
 chmod +x apt-get-autoupdater.sh
 sudo ./apt-get-autoupdater.sh
 ```
@@ -114,11 +114,11 @@ sudo crontab -e
   - add the following to the bottom of the document:
   ```bash
   # OS-Auto-Updater
-    00 01 * * 0 bash $HOME/pp4-valkyrie/scripts/apt-get-autoupdater.sh
+    00 01 * * 0 bash $HOME/potentpi4/scripts/apt-get-autoupdater.sh
       # execute automatic update script and log every sunday at 01:00 am
-    50 00 1 * * /bin/bash -c 'cp $HOME/pp4-valkyrie/logs/apt-get-autoupdater.log $HOME/pp4-valkyrie/backup_logs/apt-get-autoupdater-$(date +\%Y\%m\%d).log'
+    50 00 1 * * /bin/bash -c 'cp $HOME/potentpi4/logs/apt-get-autoupdater.log $HOME/potentpi4/backup_logs/apt-get-autoupdater-$(date +\%Y\%m\%d).log'
       # saves monthly version of "apt-get-autoupdater.log" on the 1st of every month at 00:50 am
-    51 00 1 * * rm -f $HOME/pp4-valkyrie/logs/apt-get-autoupdater.log
+    51 00 1 * * rm -f $HOME/potentpi4/logs/apt-get-autoupdater.log
       # deletes old weekly log on the 1st of every month at 00:51 am
   ```
 
@@ -156,7 +156,7 @@ docker compose version
 
 - Installing Container Stack (via script)
 ```bash
-cd ~/pp4-valkyrie/scripts
+cd ~/potentpi4/scripts
 chmod +x docker-up-all.sh
 ./docker-up-all.sh
 ```
