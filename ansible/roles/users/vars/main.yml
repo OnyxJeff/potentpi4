@@ -3,4 +3,4 @@ default_users:
   - name: jeff
     shell: /bin/bash
     groups: sudo
-    ssh_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFhPjbSXmERvLEffwyJTIdACoGeDcEggE+/UrSm+jtEK ansible@homelab"
+    ssh_key: "<Delete and fill with your own public key>"
