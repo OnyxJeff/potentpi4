@@ -1,9 +1,9 @@
 #!/bin/bash 
 # Run docker compose up -d in all docker project folders automatically 
-# For pp2-Mimir 
+# For pp4-Valkyrie 
 set -e # Exit immediately on any error 
 
-DOCKER_BASE="$HOME/pp4-skadi"
+DOCKER_BASE="$HOME/pp4-valkyrie"
 
 echo "=== 🚀 Auto-starting all Docker Compose stacks under: $DOCKER_BASE ===" 
 

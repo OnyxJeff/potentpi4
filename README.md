@@ -58,6 +58,32 @@ pp4-valkyrie/
 
 ---
 
+## 🖥️ Installing U6143_ssd1306 Display
+
+- Run setup_display_service.sh script
+```bash
+cd ~/pp4-valkyrie/U6143_ssd1306
+chmod +x setup_display_service.sh
+sudo ./setup_display_service.sh
+```
+
+- Custom display temperature type
+  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the TEMPERATURE_TYPE variable to change the type of temperature displayed. (The default is Fahrenheit)
+  ![Select Temperature](images/select_temperature.jpg)
+
+- Custom display IPADDRESS_TYPE type
+  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the IPADDRESS_TYPE variable to change the type of IP displayed. (The default is ETH0)
+  ![Select IP](images/select_ip.jpg)
+
+- Custom display information
+  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the IP_SWITCH variable to determine whether to display the IP address or custom information. (The custom IP address is displayed by default)
+  ![Custom Display](images/custom_display.jpg)
+
+> [!Note]
+> I did rewrite the initial install script to be more repo friendly.
+
+---
+
 ## ⚠️ Updating the OS
 
 - Make log folders
@@ -90,32 +116,6 @@ sudo crontab -e
     51 00 1 * * rm -f $HOME/pp4-valkyrie/logs/apt-get-autoupdater.log
       # deletes old weekly log on the 1st of every month at 00:51 am
   ```
-
----
-
-## 🖥️ Installing U6143_ssd1306 Display
-
-- Run setup_display_service.sh script
-```bash
-cd ~/pp4-skadi/U6143_ssd1306
-chmod +x setup_display_service.sh
-sudo ./setup_display_service.sh
-```
-
-- Custom display temperature type
-  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the TEMPERATURE_TYPE variable to change the type of temperature displayed. (The default is Fahrenheit)
-  ![Select Temperature](images/select_temperature.jpg)
-
-- Custom display IPADDRESS_TYPE type
-  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the IPADDRESS_TYPE variable to change the type of IP displayed. (The default is ETH0)
-  ![Select IP](images/select_ip.jpg)
-
-- Custom display information
-  - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the IP_SWITCH variable to determine whether to display the IP address or custom information. (The custom IP address is displayed by default)
-  ![Custom Display](images/custom_display.jpg)
-
-> [!Note]
-> I did rewrite the initial install script to be more repo friendly.
 
 ---
 
