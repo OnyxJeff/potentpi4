@@ -1,8 +1,10 @@
 plugin: netbox.netbox.nb_inventory
-api_endpoint: "{{ NETBOX_API }}"
-token: "{{ NETBOX_API_TOKEN }}"
+
+api_endpoint: "{{ lookup('env', 'NETBOX_API') }}"
+token: "{{ lookup('env', 'NETBOX_TOKEN') }}"
+
 validate_certs: false
-config_context: true
+config_context: false
 query_filters:
   - status: active
   - tag: ansible

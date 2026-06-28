@@ -53,12 +53,17 @@ pp4-valkyrie/
   - Download repo
   ```bash
   cd
-  git clone https://github.com/OnyxJeff/pp4-valkyrie.git
+  git clone https://github.com/OnyxJeff/pp1-odin.git
   ```
-
 ---
 
 ## 🖥️ Installing U6143_ssd1306 Display
+
+- Launch Raspi-Config
+```bash
+sudo raspi-config
+```
+Choose Interface Options Enable i2c
 
 - Run setup_display_service.sh script
 ```bash
@@ -172,7 +177,7 @@ ansible --version
 > Skip to "Verify your keys" section if you imported a private key from another machine
 
 ```bash
-ssh-keygen -t ed25519 -C "ansible@homelab"
+ssh-keygen -t ed25519 -C "Generic Homelab Key"
 ```
   - Explaination of flags:
     - `-t ed25519` → modern, secure key type (better than RSA)
