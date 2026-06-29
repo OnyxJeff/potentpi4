@@ -1,3 +1,10 @@
 [submodule "ansible"]
 	path = ansible
 	url = https://github.com/onyxjeff/ansible
+
+[submodule "dock-prom"]
+	path = docker/dock-prom
+	url = https://github.com/onyxjeff/dock-prom
+[submodule "docker/dock-prom"]
+	path = docker/dock-prom
+	url = https://github.com/OnyxJeff/dock-prom.git
