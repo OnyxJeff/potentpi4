@@ -165,9 +165,25 @@ chmod +x docker-up-all.sh
 
 ## 🧪 Installing Ansible
 
+- Download Ansible GitHub Repo
 ```bash
 cd ~/potentpi4
 git clone https://github.com/OnyxJeff/ansible.git
+```
+
+- Create extra `identity` folders
+```bash
+mkdir ~/potentpi4/ansible/identity/{automation,revoked,users}
+```
+
+- Create extra `inventory` folders
+```bash
+mkdir ~/potentpi4/ansible/inventory/host_vars
+```
+
+- Create extra `playbooks` folders
+```bash
+mkdir ~/potentpi4/ansible/playbooks/{cluster,maintenance}
 ```
 
 Please open the `ansible` folder and follow the Ansible `README.md` for this step
