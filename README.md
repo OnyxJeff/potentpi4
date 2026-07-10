@@ -6,6 +6,10 @@
 ![GitHub release](https://img.shields.io/github/v/release/OnyxJeff/potentpi4)
 ![Issues](https://img.shields.io/github/issues/OnyxJeff/potentpi4)
 
+>[NOTE]
+> This repo is now archived as I manage my nodes with Ansible, now. Feel free to use the most recent release files if you wish to continue using the previous iteration of this repo.
+> This node is still my Ansible node and I will still be updating my "Ansible" repo.
+
 **Valkyrie** is the internal playground server for my homelab, hosted on a Raspberry Pi 4.
 
 ## 📁 Repo Structure
